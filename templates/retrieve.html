@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+            }
+        table#t01 tr:nth-child(odd) {
+             background-color: #fff;
+            }
+        table#t01 th {
+              background-color: black;
+              color: white;
+            }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+</style>
+</head>
+<body>
+    <table style="width:100%">
+    <tr>
+    <th>F_name</th>
+    <th>L_name</th>
+    <th>User</th>
+    <th>Password</th>
+    <th>Mobile_No</th>
+    <th>Email</th>
+    <th>DOB</th>
+    <th>Gender</th>
+
+    </tr>
+
+    {% for item in data %}
+
+
+        <td>{{ item.fname }}</td>
+
+        <td>{{ item.lname }}</td>
+        <td>{{ item.user }}</td>
+        <td>{{ item.pwd }}</td>
+        <td>{{ item.mobile }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.dob}}</td>
+        <td>{{ item.gender }}</td>
+    </tr>
+    {% endfor %}
+</table>
+         <a href="/">logout</a>
+</body>
+</html>
